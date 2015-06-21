@@ -1,6 +1,7 @@
-## Two functions makeCacheMatrix and cacheSolve
-	## makeCacheMatrix creates a special "matrix" object and consists of the functions- 
-		##	setmatrix:	switches flagchange indicator if the input matrix is same as the original matrix
+## Two functions makeCacheMatrix and cacheSolve to solve for R Programming Assignment2
+	## makeCacheMatrix creates a special "matrix" object and consists of list of functions- 
+		##	setmatrix:	updates matrix to new set value
+					switches flagchange indicator if the input matrix is same as the original matrix
 		##	getmatrix:	retrieves matrix
 		##	setinverse:	calculates inverse of input matrix
 		##	getinverse: retrieves inverse matrix
@@ -11,14 +12,12 @@ makeCacheMatrix <- function(x = matrix()) {
 	flagchange <<- -1						##flagchange default value is -1
       setmatrix <- function(y = matrix()) {
                 if(identical(x,y)=="TRUE") {
-				flagchange <<- 0	
-				print(flagchange)			##flagchange set to 0 if array is unchanged
+				flagchange <<- 0			##flagchange set to 0 if array is unchanged
 			}
 		    else {
 				flagchange <<- 1			##flagchange set to 1 if array is different
 				x <<- y
 				matrixinv <- matrix(NA,nrow(x),ncol(x)) 
-				print(flagchange)
 			}
         }
       getmatrix <- function() x
@@ -33,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## cacheSolve calculates / retrieves inverse of specified matrix
-## Flagchange vector helps identify if the matrix is a repeat or new assignment
+## Flagchange vector helps identify if the matrix is a repeat (0) or new assignment
 ## The inverse is retrieved from cache if the matrix is unchanged else calculated
 
 cacheSolve <- function(x, ...) {
