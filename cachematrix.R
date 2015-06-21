@@ -1,7 +1,7 @@
 ## Two functions makeCacheMatrix and cacheSolve to solve for R Programming Assignment2
 	## makeCacheMatrix creates a special "matrix" object and consists of list of functions- 
 		##	setmatrix:	updates matrix to new set value
-					switches flagchange indicator if the input matrix is same as the original matrix
+		##			switches flagchange indicator if the input matrix is same as the original matrix
 		##	getmatrix:	retrieves matrix
 		##	setinverse:	calculates inverse of input matrix
 		##	getinverse: retrieves inverse matrix
